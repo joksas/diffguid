@@ -28,11 +28,13 @@ func CompareFeeds(localPath, url string) error {
 	if err != nil {
 		return err
 	}
+	log.Info("Retrieved local feed.")
 
 	remote, err := remoteFeed(url)
 	if err != nil {
 		return err
 	}
+	log.Info("Retrieved remote feed.")
 
 	localGUIDs := map[time.Time]string{}
 	for _, item := range local.Items {
