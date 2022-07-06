@@ -1,4 +1,4 @@
-module github.com/joksas/guid-diff
+module github.com/joksas/diffguid
 
 go 1.18
 
